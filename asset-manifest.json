@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/footbal-tz/static/css/main.a0b5559d.css",
+    "main.js": "/footbal-tz/static/js/main.e6f94f42.js",
+    "index.html": "/footbal-tz/index.html",
+    "main.a0b5559d.css.map": "/footbal-tz/static/css/main.a0b5559d.css.map",
+    "main.e6f94f42.js.map": "/footbal-tz/static/js/main.e6f94f42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0b5559d.css",
+    "static/js/main.e6f94f42.js"
+  ]
+}
