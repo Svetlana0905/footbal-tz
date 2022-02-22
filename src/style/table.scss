@@ -18,3 +18,8 @@
 	border: 1px solid #dddddd;
 	padding: 5px;
 }
+@media (max-width: 560px) {
+  .table {
+	  font-size: 12px;
+  }
+ }

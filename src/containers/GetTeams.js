@@ -18,7 +18,7 @@ export const GetTeams = () => {
 
    const onSearch = value => {
       if (value.length) {
-         teams.teams.map((item, id) => {
+         teams.teams.forEach((item, id) => {
             if (item.name === value) {
                setNameSearchTeams(value)
                setCurrentPage(Math.ceil((id + 1) / 9))
