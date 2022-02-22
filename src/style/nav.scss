@@ -1,6 +1,7 @@
 @import "../style/app.scss";
 .nav {
    display: flex;
+   align-items: center;
    gap: 2em;
    &__link {
       color: white;
