@@ -1,0 +1,43 @@
+.logo {
+   width: 60px;
+   height: 90px;
+   position: relative;
+   &__ball {
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      animation-name: bouncing-ball;
+      animation-duration: 4s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+   }
+}
+@keyframes bouncing-ball {
+   0% {
+      bottom: 100%;
+   }
+   10% {
+      width: 31px;
+      bottom: 0;
+   }
+   25% {
+      width: 35px;
+      bottom: 65%;
+   }
+   40% {
+      width: 32px;
+      bottom: 0;
+   }
+   60% {
+      width: 35px;
+      bottom: 35%;
+   }
+   80% {
+      width: 32px;
+      bottom: 0;
+   }
+   100% {
+      width: 35px;
+      bottom: 20%;
+   }
+}
