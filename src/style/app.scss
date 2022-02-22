@@ -1,0 +1,36 @@
+@import "./null.scss";
+@import "./shared.scss";
+.app {
+  text-align: center;
+}
+a {
+  font-size: 1.1rem;
+}
+.ant-layout-content {
+  min-height: 90vh;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.ant-breadcrumb {
+  padding: 2em 0;
+}
+.ant-input-wrapper {
+  padding: 2em 0 0;
+}
+.ant-picker {
+  margin-bottom: 1em;
+}
+.spin {
+  max-width: 50px;
+  margin: 0 auto;
+  padding: 3em 0;
+}
+.ant-breadcrumb a {
+  color: rgb(145, 20, 0);
+}
+.ant-pagination {
+  margin-bottom: 2em;
+}

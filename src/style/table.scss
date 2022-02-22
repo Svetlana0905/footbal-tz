@@ -1,0 +1,20 @@
+.table {
+	margin-bottom: 3em;
+	&__fulltime {
+		opacity: 1;
+	}
+	&__extratime {
+		opacity: 0.6;
+	}
+}
+.table th {
+	font-weight: bold;
+	padding: 15px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.table td {
+	width: 20%;
+	border: 1px solid #dddddd;
+	padding: 5px;
+}

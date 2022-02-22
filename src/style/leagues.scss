@@ -1,0 +1,58 @@
+@import "../style/app.scss";
+.leagues {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: 1.3em;
+   margin: 0 auto;
+   padding: 3em 0;
+   &__block {
+      position: relative;
+      flex: 0 1 300px;
+      padding: 3em 1em;
+      border: 1px solid $dark50;
+      box-shadow: $shadow20;
+      border-radius: 0.5em;
+   }
+   &__block--active {
+      position: relative;
+      border: 1px solid $link;
+      box-shadow: $shadow50;
+   }
+   &__name {
+      color: $dark100;
+      font-size: 1.1rem;
+   }
+   &__link {
+      color: $link;
+      font-weight: 600;
+   }
+   &__link::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+   }
+}
+.isDisabled {
+   cursor: not-allowed;
+   opacity: 0.5;
+}
+a[aria-disabled="true"] {
+   color: currentColor;
+   display: inline-block;
+   pointer-events: none;
+   text-decoration: none;
+}
+
+.league {
+   &__block--row {
+      display: flex;
+      padding: 2em 0;
+   }
+   &__span {
+      width: 20%;
+   }
+}

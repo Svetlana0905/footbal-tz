@@ -1,0 +1,51 @@
+@import "../style/app.scss";
+.teams {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: 1.3em;
+   margin: 0 auto;
+   padding: 3em 0;
+   &__block {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 300px;
+      align-items: center;
+      gap: 1.2em;
+      padding: 3em 1em;
+      border: 1px solid $dark50;
+      box-shadow: $shadow20;
+      border-radius: 0.5em;
+   }
+   &__block--active {
+      border: 1px solid $link;
+      box-shadow: $shadow50;
+   }
+   &__name {
+      color: $dark100;
+      font-size: 1.1rem;
+   }
+   &__img {
+      width: 250px;
+      height: 250px;
+   }
+   &__link {
+      color: $link;
+      font-weight: 600;
+   }
+   &__link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+   }
+}
+@media (max-width: 560px) {
+   .teams__img {
+      width: 200px;
+      height: 200px;
+   }
+ }
