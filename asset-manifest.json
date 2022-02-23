@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/footbal-tz/static/css/main.25513f91.css",
-    "main.js": "/footbal-tz/static/js/main.42af52db.js",
+    "main.css": "/footbal-tz/static/css/main.b76f32de.css",
+    "main.js": "/footbal-tz/static/js/main.e56badf1.js",
     "static/media/ball.svg": "/footbal-tz/static/media/ball.fa005e494501fa7195c123669d753627.svg",
     "index.html": "/footbal-tz/index.html"
   },
   "entrypoints": [
-    "static/css/main.25513f91.css",
-    "static/js/main.42af52db.js"
+    "static/css/main.b76f32de.css",
+    "static/js/main.e56badf1.js"
   ]
 }
