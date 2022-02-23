@@ -100,3 +100,8 @@
       left: 50%;
    }
 }
+@media (max-width: 460px) {
+	.error__link {
+		font-size: 1.2rem;
+	}
+}
