@@ -19,7 +19,12 @@
 	padding: 5px;
 }
 @media (max-width: 560px) {
-  .table {
-	  font-size: 12px;
-  }
- }
+	.td {
+		display: none;
+	}
+}
+@media (max-width: 360px) {
+	.table {
+		font-size: 12px;
+	}
+}

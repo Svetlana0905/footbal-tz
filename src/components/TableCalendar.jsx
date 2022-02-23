@@ -9,7 +9,7 @@ export const TableCalendar =(props) => {
       <thead>
          <tr>
             <th>Дата</th>
-            <th>Статус</th>
+            <th className='td'>Статус</th>
             <th>Гостевая команда</th>
             <th>Домашняя команда</th>
             <th>Счёт</th>
@@ -19,7 +19,7 @@ export const TableCalendar =(props) => {
          {props.currentPageArr.map(item =>
             <tr key={item.id}>
                <td>{<DataConverter date={item.utcDate} />}</td>
-               <td>{<ShowStatus status={item.status} />}</td>
+               <td className='td'>{<ShowStatus status={item.status} />}</td>
                <td>{item.awayTeam.name}</td>
                <td>{item.homeTeam.name}</td>
                <td>{<ShowScore game={item.status}
