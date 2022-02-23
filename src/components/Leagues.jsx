@@ -16,7 +16,7 @@ export const Leagues = (props) => {
             placement="bottomLeft"
           >
             <p>
-              Лига: <span className='leagues__name'>{item.name}</span>
+              Лига: <span className={arrCode.includes(item.code) ? 'leagues__name--active':'leagues__name'}>{item.name}</span>
             </p>
             <span>Страна: </span>
             <Link to={arrCode.includes(item.code) ? `/calendar/${item.code}` : ''}

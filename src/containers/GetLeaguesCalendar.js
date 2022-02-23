@@ -2,6 +2,7 @@ import { useGetLeaguesCalendarQuery } from '../redux';
 import { useParams, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { TableCalendar } from '../components/TableCalendar';
+import { NotFoundPage } from '../components/NotFoundPage';
 import { Pagination, Breadcrumb, DatePicker, Spin } from 'antd';
 
 
@@ -31,7 +32,9 @@ export const GetLeaguesCalendar = () => {
    }
 
    if (isLoading) return <div className='spin'><Spin tip="Загрузка..."></Spin></div>
-   if (isError) return <div className='container'><h1>Извините, произошла ошибка, попробуйте снова</h1><Link to='/'>Лиги</Link></div>
+   if (isError) return <div className='container'>
+      <NotFoundPage text={'Такой лиги нет.'} />
+   </div>
    if (isSuccess) {
       currentPageArr = calendar.matches.slice(firstPage, lastPage)
       totalPage = calendar.matches.length

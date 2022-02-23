@@ -1,7 +1,7 @@
 .logo {
+   position: relative;
    width: 60px;
    height: 90px;
-   position: relative;
    &__ball {
       width: 35px;
       height: 35px;
@@ -14,7 +14,7 @@
 }
 @keyframes bouncing-ball {
    0% {
-      bottom: 100%;
+      bottom: 150%;
    }
    10% {
       width: 31px;

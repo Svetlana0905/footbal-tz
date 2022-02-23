@@ -19,7 +19,7 @@
       border-radius: 0.5em;
    }
    &__block--active {
-      border: 1px solid $link;
+      border: 2px solid $dark50;
       box-shadow: $shadow50;
    }
    &__name {
