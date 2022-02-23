@@ -1,0 +1,102 @@
+@import "../style/app.scss";
+.error {
+   text-align: center;
+   padding-top: 2em;
+   font-size: 1.5rem;
+   &__link {
+      position: relative;
+      text-align: center;
+      color: $red;
+      font-weight: 600;
+      font-size: 1.2rem;
+      transition: all 0.4s ease;
+      padding: 0.5em 0;
+   }
+   &__link--block {
+      text-align: center;
+   }
+   &__link::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background-color: $dark75;
+      width: 0;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+   }
+   &__link:hover:after,
+   &__link:focus:after {
+      width: 100%;
+   }
+   &__link:hover,
+   &__link:focus {
+      color: $dark75;
+   }
+   &__img--block {
+      height: 80px;
+      width: 100%;
+      position: relative;
+   }
+   &__img {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      will-change: animation;
+      animation: bounc-ball 4s ease-out forwards 4s, left-ball 4s ease-out both 4s;
+   }
+}
+@keyframes bounc-ball {
+   0% {
+      width: 40px;
+      bottom: 150%;
+   }
+   10% {
+      width: 36px;
+      bottom: 0;
+   }
+   25% {
+      width: 40px;
+      bottom: 75%;
+   }
+   40% {
+      width: 36px;
+      bottom: 0;
+   }
+   60% {
+      width: 40px;
+      bottom: 45%;
+   }
+   80% {
+      width: 36px;
+      bottom: 0;
+   }
+   100% {
+      width: 40px;
+      bottom: 20%;
+   }
+}
+@keyframes left-ball {
+   0% {
+      left: 18%;
+   }
+   10% {
+      left: 28%;
+   }
+   25% {
+      left: 35%;
+   }
+   40% {
+      left: 40%;
+   }
+   60% {
+      left: 45%;
+   }
+   80% {
+      left: 48%;
+   }
+   100% {
+      left: 50%;
+   }
+}
