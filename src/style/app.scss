@@ -48,3 +48,11 @@ a {
     padding: 0 5px;
   }
 }
+@media (max-width: 590px) {
+  .ant-picker-panel-container .ant-picker-panels {
+    flex-direction: column;
+  }
+  .ant-picker-dropdown-range {
+    padding-top: 90px;
+  }
+}
