@@ -2,13 +2,13 @@
 .leagues {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: space-around;
    gap: 1.3em;
    margin: 0 auto;
    padding: 3em 0;
    &__block {
       position: relative;
-      flex: 0 1 300px;
+      min-width: 300px;
       padding: 3em 1em;
       border: 1px solid $dark50;
       box-shadow: $shadow20;

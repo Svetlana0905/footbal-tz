@@ -5,12 +5,12 @@
    font-size: 1.5rem;
    &__link {
       position: relative;
+      padding: 0.5em 0;
       text-align: center;
-      color: $red;
+      color: $dark75;
       font-weight: 600;
       font-size: 1.2rem;
       transition: all 0.4s ease;
-      padding: 0.5em 0;
    }
    &__link--block {
       text-align: center;
@@ -19,7 +19,7 @@
       content: "";
       position: absolute;
       height: 2px;
-      background-color: $dark75;
+      background-color: $red;
       width: 0;
       left: 50%;
       bottom: 0;
@@ -32,17 +32,17 @@
    }
    &__link:hover,
    &__link:focus {
-      color: $dark75;
+      color: $red;
    }
    &__img--block {
+      position: relative;
       height: 80px;
       width: 100%;
-      position: relative;
    }
    &__img {
+      position: absolute;
       width: 40px;
       height: 40px;
-      position: absolute;
       will-change: animation;
       animation: bounc-ball 4s ease-out forwards 4s, left-ball 4s ease-out both 4s;
    }
@@ -101,7 +101,8 @@
    }
 }
 @media (max-width: 460px) {
-	.error__link {
-		font-size: 1.2rem;
-	}
+   .error__link,
+   .error {
+      font-size: 1rem;
+   }
 }

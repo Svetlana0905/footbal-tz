@@ -32,9 +32,7 @@ export const GetLeaguesCalendar = () => {
    }
 
    if (isLoading) return <div className='spin'><Spin tip="Загрузка..."></Spin></div>
-   if (isError) return <div className='container'>
-      <NotFoundPage text={'Такой лиги нет.'} />
-   </div>
+   if (isError) return <div className='container'><NotFoundPage text={'Такой лиги нет.'} /></div>
    if (isSuccess) {
       currentPageArr = calendar.matches.slice(firstPage, lastPage)
       totalPage = calendar.matches.length
@@ -42,18 +40,21 @@ export const GetLeaguesCalendar = () => {
    return (
       <div className='container'>
          <Breadcrumb>
-            <Breadcrumb.Item><Link to='/'>Лиги</Link></Breadcrumb.Item>
+            <Breadcrumb.Item>
+               <Link to='/'>Лиги</Link>
+            </Breadcrumb.Item>
             <Breadcrumb.Item>{calendar.competition.name}</Breadcrumb.Item>
          </Breadcrumb>
          <RangePicker onChange={onChange} />
          <TableCalendar name={calendar.competition.name} currentPageArr={currentPageArr} />
-         <Pagination
-            current={currentPage}
-            onChange={setCurrentPage}
-            pageSize={countriesPerPage}
-            showSizeChanger={false}
-            total={totalPage}
-         />
+         {currentPageArr.length
+            ? <Pagination
+               current={currentPage}
+               onChange={setCurrentPage}
+               pageSize={countriesPerPage}
+               showSizeChanger={false}
+               total={totalPage}
+            /> : ''}
       </div>
    );
 }

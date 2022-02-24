@@ -2,7 +2,7 @@
 .teams {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: space-around;
    gap: 1.3em;
    margin: 0 auto;
    padding: 3em 0;
@@ -10,10 +10,10 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      flex: 1 0 300px;
+      min-width: 280px;
       align-items: center;
       gap: 1.2em;
-      padding: 3em 1em;
+      padding: 2em 1em;
       border: 1px solid $dark50;
       box-shadow: $shadow20;
       border-radius: 0.5em;

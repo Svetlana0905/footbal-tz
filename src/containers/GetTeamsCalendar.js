@@ -32,9 +32,7 @@ export const GetTeamsCalendar = () => {
    }
 
    if (isLoading) return <div className='spin'><Spin tip="Загрузка..."></Spin></div>
-   if (isError) return <div className='container'>
-      <NotFoundPage text={'Не смогли найти такую команду.'}/>
-   </div>
+   if (isError) return <div className='container'><NotFoundPage text={'Не смогли найти такую команду.'} /></div>
    if (isSuccess) {
       currentPageArr = calendar.matches.slice(firstPage, lastPage)
       totalPage = calendar.matches.length
@@ -42,18 +40,19 @@ export const GetTeamsCalendar = () => {
    return (
       <div className='container'>
          <Breadcrumb>
-            <Breadcrumb.Item><Link to='/teams' >Команды</Link></Breadcrumb.Item>
+            <Breadcrumb.Item><Link to='/teams'>Команды</Link></Breadcrumb.Item>
             <Breadcrumb.Item>{teamname}</Breadcrumb.Item>
          </Breadcrumb>
          <RangePicker onChange={onChange} />
          <TableCalendar name={teamname} currentPageArr={currentPageArr} />
-         <Pagination
-            current={currentPage}
-            onChange={setCurrentPage}
-            pageSize={countriesPerPage}
-            showSizeChanger={false}
-            total={totalPage}
-         />
+         {currentPageArr.length
+            ? <Pagination
+               current={currentPage}
+               onChange={setCurrentPage}
+               pageSize={countriesPerPage}
+               showSizeChanger={false}
+               total={totalPage}
+            /> : ''}
       </div>
    );
 }

@@ -1,5 +1,5 @@
 import '../style/table.scss';
-import {NotFoundPage} from './NotFoundPage';
+import { NotFoundPage } from './NotFoundPage';
 import { DataConverter } from './DataConverter';
 import { ShowStatus } from './ShowStatus';
 import { ShowScore } from './ShowScore';
@@ -37,8 +37,8 @@ export const TableCalendar = (props) => {
                      </tr>
                   )}
                </tbody>
-            </table> 
-            : <NotFoundPage text={'Нет таких данных'}/>
+            </table>
+            : <NotFoundPage text={'Нет данных для календаря.'} />
          }
       </>
    );

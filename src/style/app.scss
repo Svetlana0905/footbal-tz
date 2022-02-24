@@ -9,13 +9,19 @@ a {
 .text {
   font-size: 1rem;
 }
-.ant-layout-content {
-  min-height: 90vh;
-}
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 10px;
+}
+.header__inner {
+  display: flex;
+  gap: 3em;
+}
+//----ANTD block
+
+.ant-layout-content {
+  min-height: 90vh;
 }
 .ant-breadcrumb {
   padding: 2em 0;
@@ -32,7 +38,7 @@ a {
   padding: 3em 0;
 }
 .ant-breadcrumb a {
-  color: rgb(145, 20, 0);
+  color: $dark75;
 }
 .ant-pagination {
   margin-bottom: 2em;
@@ -40,19 +46,16 @@ a {
 .ant-layout-header {
   height: 90px;
 }
-.header__inner {
-  display: flex;
-}
-@media (max-width: 375px) {
-  .container {
-    padding: 0 5px;
-  }
-}
 @media (max-width: 590px) {
   .ant-picker-panel-container .ant-picker-panels {
     flex-direction: column;
   }
   .ant-picker-dropdown-range {
     padding-top: 90px;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    padding: 0 5px;
   }
 }
