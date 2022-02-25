@@ -1,4 +1,4 @@
-import '../style/table.scss';
+import '../style/calendar.scss';
 import { NotFoundPage } from './NotFoundPage';
 import { DataConverter } from './DataConverter';
 import { ShowStatus } from './ShowStatus';
@@ -8,37 +8,30 @@ export const TableCalendar = (props) => {
    return (
       <>
          {props.currentPageArr.length
-            ? <table border="1" cellPadding="7" width="100%" className='table'>
-               <thead>
-                  <tr>
-                     <th>Дата</th>
-                     <th className='table__td--hidden'>Статус</th>
-                     <th>Гостевая команда</th>
-                     <th>Домашняя команда</th>
-                     <th>Счёт</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  {props.currentPageArr.map(item =>
-                     <tr key={item.id}>
-                        <td>{<DataConverter date={item.utcDate} />}</td>
-                        <td className='table__td--hidden'>{<ShowStatus status={item.status} />}</td>
-                        <td>{item.awayTeam.name}</td>
-                        <td>{item.homeTeam.name}</td>
-                        <td>{<ShowScore game={item.status}
-                           fullTimeHome={item.score.fullTime.homeTeam}
-                           fullTimeAway={item.score.fullTime.awayTeam}
-                           extraTimeHome={item.score.extraTime.homeTeam}
-                           extraTimeAway={item.score.extraTime.awayTeam}
-                           penaltiesHome={item.score.penalties.homeTeam}
-                           penaltiesAway={item.score.penalties.awayTeam}
-                        />}
-                        </td>
-                     </tr>
-                  )}
-               </tbody>
-            </table>
-            : <NotFoundPage text={'Нет данных для календаря.'} />
+            ? <div className='calendar'>
+               {props.currentPageArr.map(item =>
+                  <div key={item.id} className='calendar__row'>
+                     <div className='calendar__block block--data'>
+                        <div className='block--data__data'>{<ShowStatus status={item.status} />}</div>
+                        <div className='block--data__data'>{<DataConverter date={item.utcDate} />}</div>
+                     </div>
+                     <div className='calendar__block block--names'>
+                        <p className='block--names__name'>{item.awayTeam.name}</p>
+                        <span className='block--names__versus'>vs</span>
+                        <p className='block--names__name'>{item.homeTeam.name}</p>
+                     </div>
+                     <div className='calendar__block'>{<ShowScore game={item.status}
+                        fullTimeHome={item.score.fullTime.homeTeam}
+                        fullTimeAway={item.score.fullTime.awayTeam}
+                        extraTimeHome={item.score.extraTime.homeTeam}
+                        extraTimeAway={item.score.extraTime.awayTeam}
+                        penaltiesHome={item.score.penalties.homeTeam}
+                        penaltiesAway={item.score.penalties.awayTeam}
+                     />}</div>
+                  </div>
+               )}
+            </div>
+            : <NotFoundPage info={'Нет данных для календаря.'} />
          }
       </>
    );

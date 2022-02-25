@@ -1,0 +1,73 @@
+@import "../style/app.scss";
+.calendar {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 2em;
+	&__row {
+		display: flex;
+		width: 100%;
+		padding: 0.6em 0;
+		font-size: 1rem;
+		border-top: 1px solid $border;
+		&:last-child {
+			border-bottom: 1px solid $border;
+		}
+	}
+	&__block {
+		&:last-child {
+			padding: 0 0.8em;
+		}
+	}
+}
+.block--names,
+.block--data {
+	display: flex;
+}
+.block--data {
+	&__data {
+		padding: 0 0.8em;
+		border-right: 1px solid $border;
+	}
+}
+.block--names {
+	flex-grow: 1;
+	&__name {
+		width: 50%;
+		padding: 0 0.8em;
+		border-right: 1px solid $border;
+	}
+	&__versus {
+		display: none;
+	}
+}
+@media (max-width: 830px) {
+	.block--data {
+		flex-direction: column;
+		width: 30%;
+	}
+	.block--data__data {
+		padding: 0.2em;
+	}
+}
+@media (max-width: 650px) {
+	.block--names {
+		flex-direction: column;
+		width: 55%;
+	}
+	.block--names__name {
+		width: 100%;
+		padding: 0.3em ;
+	}
+	.block--names__versus {
+		display: block;
+		padding-left: 0.5em;
+		color: $red;
+	}
+	.calendar__block {
+		&:last-child {
+			width: 15%;
+			padding: 0 0.2em;
+		}
+	}
+}

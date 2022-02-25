@@ -9,11 +9,11 @@ const { Header, Content } = Layout;
 export const LayoutPage = () => {
    return (
       <Layout>
-         <Header className='header'>
+         <Header>
             <div className='container'>
                <div className='header__inner'>
                   <div className='logo'>
-                     <p className='logo__ball'><img src={Ball} alt="Логотип" /></p>
+                     <div className='logo__ball'><img src={Ball} alt="Логотип" /></div>
                   </div>
                   <nav className='nav'>
                      <NavLink to="/" className={({ isActive }) => isActive ? 'nav__active--link' : 'nav__link'}>Лиги</NavLink>

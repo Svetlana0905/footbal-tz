@@ -23,10 +23,13 @@
       color: $dark100;
       font-size: 1.1rem;
    }
-   &__name--active{
+   &__name--active {
       font-size: 1.1rem;
       color: $link;
       font-weight: 600;
+   }
+   &__country {
+      padding: 1.2em 0;
    }
    &__link {
       color: $link;
@@ -43,21 +46,11 @@
 }
 .isDisabled {
    cursor: not-allowed;
-   opacity: 0.5;
+   opacity: 0.6;
 }
 a[aria-disabled="true"] {
    color: currentColor;
    display: inline-block;
    pointer-events: none;
    text-decoration: none;
-}
-
-.league {
-   &__block--row {
-      display: flex;
-      padding: 2em 0;
-   }
-   &__span {
-      width: 20%;
-   }
 }
