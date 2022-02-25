@@ -10,6 +10,7 @@
       color: $dark75;
       font-weight: 600;
       font-size: 1.2rem;
+      background: transparent;
       transition: all 0.4s ease;
    }
    &__link--block {
@@ -44,7 +45,7 @@
       width: 40px;
       height: 40px;
       will-change: animation;
-      animation: bounc-ball 4s ease-out forwards 4s, left-ball 4s ease-out both 4s;
+      animation: bounc-ball 3s ease-out forwards 3s, left-ball 3s ease-out both 3s;
    }
 }
 @keyframes bounc-ball {

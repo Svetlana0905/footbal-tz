@@ -19,8 +19,8 @@ export const GetLeagues = () => {
    const onSearch = value => {
       if (value.length) {
          leagues.competitions.forEach((item, id) => {
-            if (item.name === value) {
-               setNameSearchLeague(value)
+            if (item.name.toLowerCase().trim() === value.toLowerCase().trim()) {
+               setNameSearchLeague(item.name)
                setCurrentPage(Math.ceil((id + 1) / 9))
             }
          })

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export const Teams = (props) => {
+
   return (
     <div className='teams'>
       {props.currentPageArr.map(item =>
@@ -11,6 +12,7 @@ export const Teams = (props) => {
             {item.name}
           </Link>
           <p><img className='teams__img' src={item.crestUrl} alt={item.name} /></p>
+          <Link to={props.nameSearchTeams} title="Basic demo" />
         </div>)}
     </div>
   );

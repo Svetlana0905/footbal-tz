@@ -8,7 +8,8 @@
    padding: 3em 0;
    &__block {
       position: relative;
-      min-width: 300px;
+      width: 31%;
+      min-width: 280px;
       padding: 3em 1em;
       border: 1px solid $dark50;
       box-shadow: $shadow20;
@@ -16,7 +17,7 @@
    }
    &__block--active {
       position: relative;
-      border: 2px solid $dark50;
+      border: 2px solid $link;
       box-shadow: $shadow50;
    }
    &__name {
